@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FEITO DA MARCA — Loja de produtos digitais</title>
+<meta name="description" content="Templates, mockups, fontes, identidades visuais e ferramentas digitais para criar, transformar e tirar projetos do papel.">
+<meta property="og:title" content="FEITO DA MARCA — Loja de produtos digitais">
+<meta property="og:description" content="Ideias boas merecem virar marca. Templates, ferramentas e recursos digitais.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#FF4B1F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<script type="application/ld+json" id="ld-json">{"@context":"https://schema.org","@type":"Store","name":"FEITO DA MARCA","description":"Marketplace de produtos digitais"}</script>
+</head>
+<body>
+<a class="skip" href="#main">Pular para o conteúdo</a>
+
+<div class="topbar">
+  <span>Loja de demonstração · produtos, criadores e preços são fictícios</span>
+  <a href="admin.html" class="topbar__admin" rel="nofollow noindex">Admin</a>
+</div>
+
+<header class="header" id="header">
+  <div class="header__row">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <a href="#/" class="logo" aria-label="FEITO DA MARCA — página inicial">FEITO<span>DA</span>MARCA</a>
+
+    <form class="search search--header" id="headerSearch" role="search" autocomplete="off">
+      <label class="sr" for="hq">Buscar produtos</label>
+      <input id="hq" name="q" type="search" placeholder="Buscar templates, fontes, mockups…" enterkeyhint="search">
+      <button type="submit" aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </form>
+
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#/loja" data-nav="loja">Loja</a>
+      <a href="#/categorias" data-nav="categorias">Categorias</a>
+      <a href="#/novidades" data-nav="novidades">Novidades</a>
+      <a href="#/favoritos" data-nav="favoritos">Favoritos <b class="count" id="favCount" hidden>0</b></a>
+    </nav>
+
+    <a href="#/favoritos" class="icon-btn fav-link" aria-label="Favoritos">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"><path d="M12 20.5s-8-4.9-8-11A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 8 2.5c0 6.1-8 11-8 11z"/></svg>
+    </a>
+    <button class="icon-btn cart-btn" id="cartBtn" aria-label="Abrir sacola" aria-controls="drawer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+      <b class="count count--cart" id="cartCount" hidden>0</b>
+    </button>
+  </div>
+  <form class="search search--mobile" id="mobileSearch" role="search" autocomplete="off">
+    <label class="sr" for="mq">Buscar produtos</label>
+    <input id="mq" name="q" type="search" placeholder="Buscar produtos…" enterkeyhint="search">
+    <button type="submit" aria-label="Buscar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  </form>
+</header>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="footer">
+  <div class="footer__top">
+    <div>
+      <a href="#/" class="logo logo--lg">FEITO<span>DA</span>MARCA</a>
+      <p>Produtos digitais com personalidade para quem cria marcas, conteúdo e negócios.</p>
+    </div>
+    <div>
+      <h2>Loja</h2>
+      <a href="#/loja">Todos os produtos</a>
+      <a href="#/categorias">Categorias</a>
+      <a href="#/novidades">Novidades</a>
+      <a href="#/loja?free=1">Gratuitos</a>
+      <a href="#/loja?sale=1">Promoções</a>
+    </div>
+    <div>
+      <h2>Conta</h2>
+      <a href="#/favoritos">Favoritos</a>
+      <a href="#/checkout">Sacola e checkout</a>
+      <span class="muted">Biblioteca de downloads (em breve)</span>
+      <span class="muted">Venda na FEITO DA MARCA (em breve)</span>
+    </div>
+    <div>
+      <h2>Licenças</h2>
+      <p>Cada produto informa sua licença de uso na página de detalhes. Confira antes de comprar.</p>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© FEITO DA MARCA · Dados de demonstração</span>
+    <a href="admin.html" rel="nofollow noindex">Acesso administrativo</a>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+<aside class="drawer" id="drawer" aria-label="Sacola de compras" aria-hidden="true" tabindex="-1"></aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cover.js"></script>
+<script src="js/store.js"></script>
+<script src="js/payments.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

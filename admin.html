@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin — FEITO DA MARCA</title>
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<header class="ahead">
+  <strong class="alogo">FEITO DA MARCA <span>ADMIN</span></strong>
+  <a href="index.html" class="abtn abtn--ghost">← Voltar à loja</a>
+</header>
+<div class="notice" role="note">
+  <strong>Painel local de demonstração.</strong> Não há autenticação: os dados ficam apenas neste navegador (localStorage).
+  Em produção, proteja este painel com Supabase Auth + políticas RLS (veja docs/ARQUITETURA.md) — nunca publique esta versão como painel real.
+</div>
+<nav class="tabs" id="tabs" aria-label="Seções do admin">
+  <button data-tab="produtos" aria-current="true">Produtos</button>
+  <button data-tab="categorias">Categorias</button>
+  <button data-tab="criadores">Criadores</button>
+  <button data-tab="dados">Dados</button>
+</nav>
+<main id="admin" class="amain"></main>
+
+<dialog id="dlg" class="dlg"></dialog>
+<div class="atoast" id="atoast" role="status" aria-live="polite"></div>
+
+<script src="js/data.js"></script>
+<script src="js/cover.js"></script>
+<script src="js/store.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
