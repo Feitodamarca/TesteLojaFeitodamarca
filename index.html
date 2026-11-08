@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="FEITO DA MARCA — templates, ferramentas e recursos digitais para criar e transformar projetos.">
+  <meta name="theme-color" content="#f4f0e8">
+  <title>FEITO DA MARCA — Loja de recursos digitais</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="announcement">RECURSOS CRIATIVOS PARA IDEIAS QUE MERECEM SAIR DO PAPEL <span>✳</span></div>
+  <header class="site-header">
+    <a class="wordmark" href="#" aria-label="Feito da Marca — início">FEITO<span>DA</span><br>MARCA<span class="mark-dot">.</span></a>
+    <button class="mobile-menu icon-button" id="menuToggle" aria-label="Abrir menu">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#loja">Loja</a><a href="#categorias">Categorias</a><a href="#novidades">Novidades</a><a href="#favoritos" id="favoritesNav">Favoritos <span class="nav-count" id="favoriteCount">0</span></a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button search-toggle" id="searchToggle" aria-label="Abrir busca">⌕</button>
+      <button class="bag-button" id="cartOpen">Sacola <span id="cartCount">0</span> ↗</button>
+      <a class="admin-link" href="#admin" id="adminLink">Admin ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-dot"></span> MARKETPLACE DE RECURSOS DIGITAIS</p>
+        <h1>IDEIAS BOAS<br>MERECEM VIRAR <em>MARCA.</em></h1>
+        <p class="hero-sub">Templates, ferramentas e recursos digitais para criar, transformar e tirar projetos do papel.</p>
+        <a class="button button-dark" href="#loja">EXPLORAR LOJA <span>↗</span></a>
+        <div class="hero-foot"><span>01 / 04</span><span>DESIGN INDEPENDENTE. IMPACTO REAL.</span></div>
+      </div>
+      <div class="hero-art" aria-label="Composição gráfica de produtos criativos">
+        <div class="art-sticker">FEITO<br>COM<br>IDEIA<span>✳</span></div>
+        <div class="art-sheet sheet-back"><span>YOUR NEXT<br>BIG THING</span><b>®</b></div>
+        <div class="art-sheet sheet-front"><div class="sheet-top">FDM / DIGITAL GOODS</div><div class="sheet-letters">Aa</div><div class="sheet-bottom">KIT DE IDENTIDADE<br>VISUAL VOL. 01</div></div>
+        <div class="art-orbit"></div><div class="art-caption">FERRAMENTAS PARA<br>FAZER ACONTECER.</div>
+      </div>
+    </section>
+
+    <section class="shop-tools" id="loja">
+      <div class="section-kicker"><span>01 — VITRINE</span><span id="resultCount">12 PRODUTOS</span></div>
+      <div class="shop-heading"><h2>Encontre seu<br><em>próximo favorito.</em></h2><p>Boas ideias, prontas para usar.<br>Escolha, baixe e coloque em prática.</p></div>
+      <form class="search-bar" id="searchForm"><span>⌕</span><input id="searchInput" type="search" placeholder="O que você está procurando?" aria-label="Buscar produtos"><button type="submit">BUSCAR ↗</button></form>
+      <div class="catalog-layout">
+        <aside class="filters">
+          <div class="filter-title">REFINAR BUSCA <button id="clearFilters">LIMPAR</button></div>
+          <label class="filter-label" for="categoryFilter">CATEGORIA</label><select id="categoryFilter"><option value="">Todas as categorias</option></select>
+          <label class="filter-label" for="sortFilter">ORDENAR POR</label><select id="sortFilter"><option value="featured">Em destaque</option><option value="newest">Mais recentes</option><option value="price-asc">Menor preço</option><option value="price-desc">Maior preço</option><option value="popular">Mais populares</option></select>
+          <label class="filter-label" for="maxPrice">PREÇO ATÉ <strong id="priceLabel">R$ 300</strong></label><input id="maxPrice" type="range" min="0" max="300" value="300" step="5">
+          <label class="check-line"><input type="checkbox" id="freeFilter"> Somente gratuitos</label>
+          <label class="check-line"><input type="checkbox" id="saleFilter"> Em promoção</label>
+          <div class="filter-note">ARQUIVOS DIGITAIS<br>DOWNLOAD APÓS A COMPRA*</div>
+        </aside>
+        <div class="catalog-main">
+          <div class="category-chips" id="categoryChips" aria-label="Categorias de produtos"></div>
+          <div class="product-grid" id="productGrid"></div>
+          <div class="empty-state" id="emptyState" hidden><span>✳</span><h3>Nenhum produto por aqui.</h3><p>Tente mudar os filtros ou buscar por outro termo.</p><button class="button button-outline" id="emptyClear">LIMPAR FILTROS</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-strip" id="novidades">
+      <div><p class="eyebrow">✳ RECÉM-CHEGADOS</p><h2>Novidade boa<br>não fica parada.</h2></div>
+      <p>Descubra os últimos recursos que chegaram à loja e encontre novas maneiras de dar forma às suas ideias.</p>
+      <a href="#loja" class="text-link" id="newProductsLink">VER NOVIDADES ↗</a>
+    </section>
+
+    <section class="creator-section">
+      <div class="section-kicker"><span>02 — QUEM FAZ</span><span>CRIAÇÃO INDEPENDENTE</span></div>
+      <div class="creator-heading"><h2>Feito por gente<br>que <em>faz acontecer.</em></h2><p>Uma seleção de recursos de criadores com olhar próprio, repertório e vontade de fazer diferente.</p></div>
+      <div class="creator-row" id="creatorRow"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark footer-logo" href="#">FEITO<span>DA</span><br>MARCA<span class="mark-dot">.</span></a>
+    <div><p>IDEIAS BOAS MERECEM VIRAR MARCA.</p><span>Uma loja de recursos digitais independentes.</span></div>
+    <div class="footer-links"><a href="#loja">Loja</a><a href="#categorias">Categorias</a><a href="#admin">Administração</a></div>
+    <small>© 2026 FEITO DA MARCA · DEMONSTRAÇÃO</small>
+  </footer>
+
+  <div class="overlay" id="cartOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Sacola de compras" aria-hidden="true">
+    <div class="drawer-head"><div><span class="eyebrow">SUA SELEÇÃO</span><h2>Sacola <span id="drawerCount">(0)</span></h2></div><button class="close-button" id="cartClose" aria-label="Fechar">×</button></div>
+    <div class="cart-items" id="cartItems"></div>
+    <div class="cart-bottom"><div class="subtotal"><span>Subtotal</span><strong id="cartSubtotal">R$ 0,00</strong></div><p>O pagamento será integrado em uma próxima etapa. Nenhuma cobrança será realizada nesta demonstração.</p><button class="button button-dark full-button" id="checkoutButton">CONTINUAR PARA PAGAMENTO ↗</button><button class="continue-link" id="continueShopping">CONTINUAR COMPRANDO</button></div>
+  </aside>
+
+  <div class="modal-backdrop" id="productModal" aria-hidden="true"><section class="product-modal" role="dialog" aria-modal="true" aria-label="Detalhes do produto"><button class="close-button modal-close" id="productClose" aria-label="Fechar">×</button><div id="productDetail"></div></section></div>
+  <div class="modal-backdrop" id="noticeModal" aria-hidden="true"><section class="notice-modal" role="dialog" aria-modal="true"><button class="close-button modal-close" id="noticeClose">×</button><span class="eyebrow">PRÓXIMA ETAPA</span><h2>Compra preparada.<br><em>Pagamento ainda não conectado.</em></h2><p>Esta loja é uma demonstração funcional de catálogo e sacola. Para receber pagamentos e liberar downloads, conecte um backend e um gateway como Mercado Pago ou Stripe.</p><button class="button button-dark" id="noticeOk">ENTENDI</button></section></div>
+
+  <section class="admin-view" id="adminView" hidden>
+    <div class="admin-top"><a class="wordmark" href="#">FEITO<span>DA</span><br>MARCA<span class="mark-dot">.</span></a><a href="#" class="text-link">← VOLTAR À LOJA</a></div>
+    <div class="admin-wrap">
+      <div class="admin-intro"><p class="eyebrow">ÁREA DE GESTÃO · DEMONSTRAÇÃO LOCAL</p><h1>Controle sua<br><em>vitrine.</em></h1><p>Gerencie produtos e criadores deste protótipo. Os dados ficam salvos neste navegador.</p></div>
+      <div class="admin-warning">⚠ Acesso demonstrativo sem autenticação. Não publique esta área como painel administrativo real.</div>
+      <div class="admin-tabs"><button class="active" data-tab="products">PRODUTOS</button><button data-tab="creators">CRIADORES</button></div>
+      <div id="adminProducts">
+        <div class="admin-list-head"><h2>Produtos <span id="adminProductCount"></span></h2><button class="button button-dark" id="addProduct">+ NOVO PRODUTO</button></div>
+        <div class="admin-product-list" id="adminProductList"></div>
+        <form class="admin-form" id="productForm" hidden>
+          <div class="form-heading"><h2 id="formTitle">Novo produto</h2><button type="button" class="close-button" id="cancelProduct">×</button></div>
+          <input type="hidden" id="editId">
+          <div class="form-grid">
+            <label>Nome do produto<input id="pName" required maxlength="80"></label>
+            <label>Categoria<input id="pCategory" required list="categoryOptions"><datalist id="categoryOptions"></datalist></label>
+            <label>Criador<input id="pCreator" required></label>
+            <label>Preço (R$)<input id="pPrice" type="number" min="0" step="0.01" required></label>
+            <label>Preço promocional (opcional)<input id="pSale" type="number" min="0" step="0.01"></label>
+            <label>URL da imagem<input id="pImage" type="url" placeholder="https://..."></label>
+            <label class="wide">Descrição<textarea id="pDescription" rows="3" required></textarea></label>
+            <label>Formatos<input id="pFormats" placeholder="PDF, PNG, PSD"></label>
+            <label>Compatibilidade<input id="pApps" placeholder="Canva, Photoshop"></label>
+            <label class="check-line"><input id="pFeatured" type="checkbox"> Em destaque</label>
+            <label class="check-line"><input id="pNew" type="checkbox"> Novidade</label>
+            <label class="check-line"><input id="pActive" type="checkbox" checked> Produto ativo</label>
+          </div>
+          <button class="button button-dark" type="submit">SALVAR PRODUTO ↗</button>
+        </form>
+      </div>
+      <div id="adminCreators" hidden><div class="admin-list-head"><h2>Criadores</h2><button class="button button-dark" id="addCreator">+ NOVO CRIADOR</button></div><div id="adminCreatorList"></div>
+        <form class="admin-form" id="creatorForm" hidden><div class="form-heading"><h2>Novo criador</h2><button type="button" class="close-button" id="cancelCreator">×</button></div><label>Nome<input id="cName" required></label><label>Especialidade<input id="cSpecialty" required></label><label>Descrição curta<input id="cBio"></label><button class="button button-dark">SALVAR CRIADOR ↗</button></form>
+      </div>
+      <p class="admin-footnote">Este painel usa localStorage apenas para prototipagem. Em produção, permissões, validação, uploads e persistência devem ser implementados no servidor.</p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
